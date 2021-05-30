@@ -1,0 +1,397 @@
+/* Add a black background color to the top navigation */
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  transition: 0.25s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.topnav:hover {
+  transform: scale(0.95, 1.05);
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: grey;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+  background-color: #23193a;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+
+.topnav input[type=text] {
+  float: center;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border-radius: 12px;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav .search-container button {
+  float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.recommended-title .h1 {
+  color: grey;
+  font-weight: bold;
+  font-size: 32;
+}
+
+/* Generic Cards */
+
+.card-body {
+  height: 70vh;
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('images/background.jpg') scroll left center;
+}
+
+.card-source {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  font-family: roboto;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.card-source:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-image .src {
+  grid-area: image;
+  /* background: url(); */
+  /* background: rgb(212, 175, 55); // metallic gold */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-text .date {
+  color: rgb(226, 17, 121);
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.card-text p {
+  color: grey;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 17px;
+}
+
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1 fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(218, 165, 32);
+}
+
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.card-stats .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card-stats .value {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.card-stats .border {
+  border-left: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+}
+
+.card-stats .value sup {
+  font-size: 12px;
+}
+
+/* Blog Style Cards */
+
+.blog-post__body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #eee;
+}
+
+.blog-post__card {
+  width: 65rem;
+  max-width: 65rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
+  display: flex;
+  align-items: center;
+  border-radius: .8rem;
+  margin: 1.5rem;
+}
+
+.blog-post__image {
+  min-width: 30rem;
+  max-width: 30rem;
+  max-height: 30rem;
+  height: 30rem;
+  transform: translateX(-8rem);
+  position: relative;
+  border-radius: .8rem;
+  overflow: hidden;
+}
+
+.blog-post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .8rem;
+  transition: 5s;
+}
+
+.blog-post__image::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(12, 71, 121, 0.80), rgba(71, 156, 161, 0.80));
+  box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, .3);
+  border-radius: .8rem;
+}
+
+.blog-post__card:hover .blog-post__image img {
+  transform: scale(1.25);
+}
+
+.blog-post__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1.5rem 0 2rem;
+  text-transform: uppercase;
+  text-align: left;
+  color: #356c9c;
+}
+
+.blog-post__text {
+  margin-bottom: 3rem;
+  font-size: 1.0rem;
+  color: rgba(0, 0, 0, .7);
+  text-align: left;
+}
+
+.blog-post__date span {
+  display: block;
+  color: rgba(0, 0, 0, .5);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: .5rem 0;
+  text-align: left;
+}
+
+.blog-post__cta {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  background-image: linear-gradient(to right, #1e4171 0%, #095e5e 100%);
+  border-radius: .8rem;
+  text-decoration: none;
+}
+
+.blog-post__cta:hover {
+    background-image: linear-gradient(to right, #095e5e 0%, #1e4171 100%);
+}
+
+/* Footer Section for copyrights */
+
+footer {
+  color: white;
+  background-color: #333;
+}
+
+/* Contact page */
+
+.contact-body {
+  text-align: left;
+  background: radial-gradient(#abb3bd 0.000000001%, white 100%);
+}
+
+/* Contact Email messages */
+
+.success-msg {
+  color: #57A773;
+  padding: 10px 15px;
+}
+
+.err-msg {
+  color: #EE6352;
+  padding: 10px 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+  .card-body {
+    float: none;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .blog-post__card {
+    margin: 2rem;
+    max-width: 44rem;
+    flex-direction: column;
+  }
+  .blog-post__image {
+    min-width: 40rem;
+    max-height: 40rem;
+    transform: translateY(-3rem);
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .blog-post__card {
+    max-width: 40rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-post__card {
+    margin: 2rem;
+    max-width: 24rem;
+    flex-direction: column;
+  }
+  .blog-post__image {
+    min-width: 20rem;
+    max-width: 20rem;
+    transform: translateY(-8rem);
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
